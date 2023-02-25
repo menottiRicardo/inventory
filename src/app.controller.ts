@@ -7,7 +7,12 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Post('create-car')
-  async getHello(@Body() data: CreateCarDto) {
+  async createCar(@Body() data: CreateCarDto) {
     return this.appService.createCar(data);
+  }
+
+  @Get('all-car')
+  async getAll() {
+    return this.appService.getAllCars();
   }
 }
