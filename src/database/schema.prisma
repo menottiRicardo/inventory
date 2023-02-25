@@ -17,3 +17,10 @@ model User {
   name      String
   email     String   @unique
 }
+
+model Car {
+  id      String @id @default(cuid())
+  make    String
+  model   String
+  ownerId String?
+}
