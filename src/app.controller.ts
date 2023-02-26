@@ -9,7 +9,6 @@ export class AppController {
 
   @Post('create-car')
   async createCar(@Body() data: CreateCarDto, @CurrentUser() userId: string) {
-    console.log(userId);
     return this.appService.createCar(data, userId);
   }
 

@@ -8,4 +8,8 @@ export class CreateCarDto {
   @IsString()
   @IsNotEmpty()
   model: string;
+
+  year: number;
+  price: number;
+  title: string;
 }
